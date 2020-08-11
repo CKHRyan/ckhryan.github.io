@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>Accessing to Food Spreadsheet</h1>
+	<button onclick="loadExcel()">Click me</button>
+	<div id = "foodtable">
+        <table></table>
+	</div>
+
+	<script>
+	
+	function loadabc() {
+		alert(google.script.run.doget());
+	}
+	
+	function loadExcel() {
+		alert("Request sent");
+		
+		$.ajax({
+		  url: "https://script.google.com/macros/s/AKfycbze1j2R4y_jffgPxLinwx7gJPMOMsBLq2Vlq5vqtP-kxo-Xd0M/exec",
+		  type: "GET",
+		  dataType: "json",
+		  async: false,
+			beforeSend: function(x) {
+				if(x && x.overrideMimeType) {
+				   x.overrideMimeType("application/j-son;charset=UTF-8");
+				}
+			},
+		  success: function(Jdata) {
+			printFoodTable(Jdata);
+		  },
+		  
+		  error: function() {
+			alert("ERROR!!!");
+		  }
+		});
+	}
+
+	function printFoodTable(rtr_obj) {
+
+		$("#foodtable")
+			.find("tr")
+			.remove()
+			.end();
+
+		var table = $('#foodtable table');
+
+		$.each(rtr_obj, function(){
+			table.append(
+				$('<tr style = "background-color: #CCCCCC; margin-top: 10px;"></tr>').append(
+					$('<td></td>').text(this.District),
+				)
+			);
+			$.each(this.Details, function(){
+				table.append(
+					$('<tr></tr>').append(
+						$('<td></td>').text(this.Name),
+						$('<td></td>').text(this.Address),
+						$('<td></td>').text(this.Cuisine),
+						$('<td></td>').text(this.PriceRange)
+					)
+				);
+			});
+		});
+	}
+	</script>	
+
+</body>
+</html> 
