@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no maximum-scale=1">
+	
+	<title>BoDiary</title>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	<link id="size-stylesheet" rel="stylesheet" type="text/css" href="bodiary_pc.css" />
 </head>
+
 <body>
 
-	<h1>Accessing to Food Spreadsheet</h1>
-	<button onclick="loadExcel()">Click me</button>
-	<div id = "foodtable">
-        <table></table>
+	<div id="main" class="wrapper">
+	
+		<div  class="title-name">Bobo Diary</div>
+		<!--<button type="button" class="btn btn-primary" onclick="updateDate()">click me</button>-->
+		<div class="col">
+			<div class="row">
+				<div class="container-fluid p-4 border round-widget bg-info">
+					寶寶最叻!<br />
+					寶寶最高!<br />
+					no 反駁 is allowed!
+				</div>
+			</div>
+			<div class="row">
+				<div class="col widget-w6 left-widget">
+					<div class="container-fluid p-4 border round-widget bg-info">
+						We have been together for <br> 
+						<b id = "rbdays"></b> Days
+					</div>
+				</div>
+				<div class="col widget-w4 right-widget">
+					<div class="container-fluid p-4 border round-widget bg-info">
+						Memorable Date
+					</div>
+				</div>
+			</div>
+			<a href="food.html">
+				<div class="row">
+					<div class="container-fluid p-4 border round-widget bg-info">
+						<b>Food</b><br />
+						Eat What Ho?
+					</div>
+				</div>
+			</a>
+			<div class="row">
+				<div class="container-fluid p-4 border round-widget bg-info">
+					<b>Plan</b><br />
+					Do What Ho?
+				</div>
+			</div>
+			<a href="./Game/GluttonousSnake.html">
+				<div class="row">
+					<div class="container-fluid p-4 border round-widget bg-info">
+						<b>Game</b><br />
+						Play play when no thing do~
+					</div>
+				</div>
+			</a>
+		</div>
 	</div>
-
-	<script>
 	
-	function loadabc() {
-		alert(google.script.run.doget());
-	}
+
 	
-	function loadExcel() {
-		alert("Request sent");
-		
-		$.ajax({
-		  url: "https://script.google.com/macros/s/AKfycbze1j2R4y_jffgPxLinwx7gJPMOMsBLq2Vlq5vqtP-kxo-Xd0M/exec",
-		  type: "GET",
-		  dataType: "json",
-		  async: false,
-			beforeSend: function(x) {
-				if(x && x.overrideMimeType) {
-				   x.overrideMimeType("application/j-son;charset=UTF-8");
-				}
-			},
-		  success: function(Jdata) {
-			printFoodTable(Jdata);
-		  },
-		  
-		  error: function() {
-			alert("ERROR!!!");
-		  }
-		});
-	}
-
-	function printFoodTable(rtr_obj) {
-
-		$("#foodtable")
-			.find("tr")
-			.remove()
-			.end();
-
-		var table = $('#foodtable table');
-
-		$.each(rtr_obj, function(){
-			table.append(
-				$('<tr style = "background-color: #CCCCCC; margin-top: 10px;"></tr>').append(
-					$('<td></td>').text(this.District),
-				)
-			);
-			$.each(this.Details, function(){
-				table.append(
-					$('<tr></tr>').append(
-						$('<td></td>').text(this.Name),
-						$('<td></td>').text(this.Address),
-						$('<td></td>').text(this.Cuisine),
-						$('<td></td>').text(this.PriceRange)
-					)
-				);
-			});
-		});
-	}
-	</script>	
-
+	<script src = "home.js"></script>
 </body>
-</html> 
+</html>

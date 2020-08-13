@@ -1,0 +1,58 @@
+.container-fluid {
+	margin: 0;
+	min-height: 200px;
+	color: white;
+	font-size: 36px;
+}
+
+.round-widget {
+    border-radius: 30px;
+}
+
+.row {
+	margin-bottom: 10px;
+}
+
+.left-widget {
+	padding-right: 5px;
+	padding-left: 0;
+}
+
+.right-widget {
+	padding-right: 0;
+	padding-left: 5px;
+}
+
+.widget-w6 {
+	max-width: 60%;
+}
+
+.widget-w4 {
+	max-width: 40%;
+}
+
+.wrapper {
+	margin: 2% 5%;
+}
+
+.title-name {
+	color: #0073b5;
+	font-family: 'Comic Sans MS';
+	font-size: 80px;
+	font-weight: bold;
+}
+
+.sd_title_name {
+	color: #0073b5;
+	font-family: 'Comic Sans MS';
+	font-size: 60px;
+	font-weight: bold;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+#rbdays {
+	font-size: 80px;
+}
