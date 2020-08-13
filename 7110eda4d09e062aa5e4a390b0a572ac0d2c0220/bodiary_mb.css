@@ -1,3 +1,7 @@
+.spinner-border {
+	width: 100px; 
+	height: 100px;
+}
 
 .container-fluid {
 	margin: 0;
@@ -34,8 +38,8 @@
 
 .wrapper {
 	margin: 2% 5%;
+	text-align: center;
 }
-
 .title-name {
 	color: #0073b5;
 	font-family: 'Comic Sans MS';

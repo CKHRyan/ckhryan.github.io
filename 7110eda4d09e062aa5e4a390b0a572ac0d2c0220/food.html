@@ -8,20 +8,36 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 	<link id="size-stylesheet" rel="stylesheet" type="text/css" href="bodiary_pc.css" />
+	<script src = "home.js"></script>
 </head>
 <body>
 
 	<div id="main" class="wrapper">
 
 		<div class="sd_title_name">Food Spreadsheet</div>
-		<button type="button" class="btn btn-primary" onclick="loadExcel()">Open</button>
-		<div class = "foodtable">
-			<table></table>
+		
+		<div id="foodtable_loadbar" class="alert alert-primary" style="margin: 50px" role="alert">
+			Waiting for fetching data from the excel.
+		</div>
+		
+		<div id="foodtable_loadspinner" class="spinner-border text-secondary" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+		
+		<div id="foodtable_option" style="display:none">
+			<button type="button" class="btn btn-primary" onclick="printFoodTable('HK')">Hong Kong</button>
+			<button type="button" class="btn btn-primary" onclick="printFoodTable('KL')">Kowloon</button>
+			<button type="button" class="btn btn-primary" onclick="printFoodTable('NT')">New Territories</button>
+			<a target="_blank" href="https://docs.google.com/spreadsheets/d/1AyerM7O4cnzWVxc4pG-lD5VYph-mxkKt5-ewAk5Sfag/edit#gid=0">
+				<button type="button" class="btn btn-primary">Edit</button>
+			</a>
+			<div id = "foodtable" style=" margin-top: 30px; display: table; margin-left: auto; margin-right: auto; text-align: left; vertical-align: baseline;">
+				<table></table>
+			</div>
 		</div>
 		
 	<div>
-	
-	<script src = "home.js"></script>
+	<script src = "foodtable.js" type="text/javascript"></script>
 
 </body>
 </html> 
