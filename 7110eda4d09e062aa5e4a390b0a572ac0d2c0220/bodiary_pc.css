@@ -1,11 +1,12 @@
+body {background-color: #F5F5F5;}
+
 .spinner-border {
 	width: 450px; 
 	height: 450px;
 }
 
 .container-fluid {
-	margin: 0;
-	min-height: 200px;
+	min-height: 300px;
 	color: white;
 	font-size: 36px;
 }
@@ -37,15 +38,25 @@
 }
 
 .wrapper {
-	margin: 2% 5%;
-	text-align: center;
+	background: white;
+	padding: 2% 5%;
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 1300px;
 }
+
+.title-header {
+	border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 30px;
+	padding-left: 50px;
+}	
 
 .title-name {
 	color: #0073b5;
-	font-family: 'Comic Sans MS';
-	font-size: 80px;
+	font-family: 'Brush Script MT';
+	font-size: 150px;
 	font-weight: bold;
+	margin: 50px 160px 0px 0px;
 }
 
 .sd_title_name {
