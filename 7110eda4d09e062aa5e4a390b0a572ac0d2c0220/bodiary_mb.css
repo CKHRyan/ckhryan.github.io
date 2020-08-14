@@ -47,11 +47,11 @@ a {width:100%;}
 	font-family: 'Comic Sans MS';
 	font-size: 45px;
 	font-weight: bold;
-	margin: 15px 0px 15px 15px;
+	margin: 15px 5px 15px 15px;
 }
 
 .title-image {
-	max-height: 80px;
+	max-height: 100px;
 }
 
 .sd_title_name {
