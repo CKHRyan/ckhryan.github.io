@@ -1,4 +1,4 @@
-body {width: 100%; background-color: #F5F5F5;}
+body {width: 100%; background-color: white;}
 a {width:100%;}
 
 .spinner-border {
@@ -47,12 +47,11 @@ a {width:100%;}
 	font-family: 'Comic Sans MS';
 	font-size: 45px;
 	font-weight: bold;
-	margin: 15px;
+	margin: 15px 0px 15px 15px;
 }
 
 .title-image {
-	height: 50px;
-	width: auto;
+	max-height: 80px;
 }
 
 .sd_title_name {

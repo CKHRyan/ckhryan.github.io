@@ -65,6 +65,10 @@ a {width:100%;}
 	margin-right: 60px;
 }
 
+.title-image {
+	max-height: 200px;
+}
+
 .sd_title_name {
 	color: #0073b5;
 	font-family: 'Comic Sans MS';
