@@ -1,5 +1,9 @@
-body {width: 100%; background-color: #F5F5F5;}
+body {width: 100%; background-color: red;}
 a {width:100%;}
+
+.bg {
+	width: 100%; background-color: #F5F5F5;
+}
 
 .spinner-border {
 	width: 450px; 
