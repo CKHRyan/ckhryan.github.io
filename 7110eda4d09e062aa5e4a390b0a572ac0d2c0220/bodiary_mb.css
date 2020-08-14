@@ -1,3 +1,6 @@
+body {width: 100%; background-color: #F5F5F5;}
+a {width:100%;}
+
 .spinner-border {
 	width: 100px; 
 	height: 100px;
@@ -38,7 +41,6 @@
 
 .wrapper {
 	margin: 2% 5%;
-	text-align: center;
 }
 .title-name {
 	color: #0073b5;
@@ -46,6 +48,11 @@
 	font-size: 45px;
 	font-weight: bold;
 	margin: 15px;
+}
+
+.title-image {
+	height: 50px;
+	width: auto;
 }
 
 .sd_title_name {
