@@ -1,15 +1,11 @@
+var tableindex = Math.ceil(getcurDate() / 100);
+var month_name = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 window.onload = function() {
 	var width = document.getElementById("main").getBoundingClientRect().width;
 	adjustStyle(width);
 	console.log(window.location.pathname);
-	var rbnth100d = Math.ceil(getcurDate() / 100);
-	for(var i = rbnth100d; i < rbnth100d + 31; i++) {
-		var comingRBDays = getnthDate(i * 100);
-		document.getElementById('memorytable').innerHTML += (i * 100) + "th Day: "
-		document.getElementById('memorytable').innerHTML += dateformater(comingRBDays);
-		document.getElementById('memorytable').innerHTML += "<br>";
-	}
+	printnth100dTable(tableindex);
 }
 
 function adjustStyle(width) {
@@ -32,8 +28,6 @@ function getnthDate(n) {
 	return new Date(rb_1st.getTime() + (n - 1)  * 86400000)
 }
 
-var month_name = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
 function dateformater(date) {
 	var dateindicator;
 	switch (date.getDate()) {
@@ -54,4 +48,28 @@ function dateformater(date) {
 			dateindicator = "<sup>th</sup>";
 	}
 	return [date.getDate()+dateindicator,month_name[date.getMonth()],date.getFullYear()].join(' ');
+}
+
+function toNextnth100Table() {
+	tableindex += 3;
+	printnth100dTable(tableindex);
+}
+
+function printnth100dTable(n) {
+	for(var i = 1; i <= 3; i++) {
+		document.getElementById('memoryitem_'+i).innerHTML = "";
+		var comingRBDays = getnthDate((n + i - 1) * 100);
+		document.getElementById('memoryitem_'+i).innerHTML += "<b style='font-size:42px;'>" + ((n + i - 1) * 100) + "th</b> Day<br>"
+		document.getElementById('memoryitem_'+i).innerHTML += "<i>" + dateformater(comingRBDays) + "</i>";
+	}
+}
+
+function toPrevnth100Table(n) {
+	if(tableindex <= 1) {
+		return;
+	}
+	if(tableindex -= 3 < 1) {
+		tableindex = 1;
+	}
+	printnth100dTable(tableindex);
 }

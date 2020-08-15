@@ -5,14 +5,31 @@ a {width:100%;}
 	width: 100%; background-color: #F5F5F5;
 }
 
+.wrapper {
+	background: white;
+	padding: 2% 5%;
+	margin-left:auto;
+	margin-right:auto;
+	max-width: 900px;
+}
+
 .spinner-border {
 	width: 450px; 
 	height: 450px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .container-fluid {
-	min-height: 300px;
 	color: white;
+}
+
+.memorywidget.container-fluid {
+	font-size: 26px;
+}
+
+.homewidget.container-fluid {
+	min-height: 300px;
 	font-size: 36px;
 }
 
@@ -42,18 +59,9 @@ a {width:100%;}
 	max-width: 40%;
 }
 
-.wrapper {
-	background: white;
-	padding: 2% 5%;
-	margin-left:auto;
-	margin-right:auto;
-	max-width: 900px;
-}
-
 .title-header {
 	border-bottom: 1px solid #DDDDDD;
 	margin-bottom: 30px;
-	padding-left: 50px;
 }	
 
 .title-name {
@@ -63,6 +71,7 @@ a {width:100%;}
 	font-weight: bold;
 	margin-top: auto;
 	margin-right: 60px;
+	margin-left: 50px;
 }
 
 .title-image {
@@ -82,4 +91,15 @@ a:link, a:visited, a:hover, a:active {
 
 #rbdays {
 	font-size: 80px;
+}
+
+#foodtable {
+	display: table;
+	margin-top: 30px;
+	text-align: left;
+	vertical-align: baseline;
+}
+
+.memorytable {
+	background: red;
 }
