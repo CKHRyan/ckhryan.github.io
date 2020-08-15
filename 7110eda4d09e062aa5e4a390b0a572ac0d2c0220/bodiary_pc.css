@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'BrushScriptMT'; /*a name to be used later*/
+    src: url('BrushScriptMT.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'ComicSansMS'; /*a name to be used later*/
+    src: url('ComicSansMS.ttf'); /*URL to font*/
+}
+
 body {width: 100%; background-image: url("bg1.jpg");/*background-color: #F5F5F5;*/}
 a {width:100%;}
 
@@ -73,7 +83,7 @@ a {width:100%;}
 
 .title-name {
 	color: #0073b5;
-	font-family: 'Brush Script MT';
+	font-family: 'BrushScriptMT';
 	font-size: 120px;
 	font-weight: bold;
 	margin-top: auto;
@@ -87,7 +97,7 @@ a {width:100%;}
 
 .sd_title_name {
 	color: #0073b5;
-	font-family: 'Comic Sans MS';
+	font-family: 'ComicSansMS';
 	font-size: 60px;
 	font-weight: bold;
 }
