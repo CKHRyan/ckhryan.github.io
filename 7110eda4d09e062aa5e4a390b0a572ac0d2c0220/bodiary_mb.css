@@ -9,7 +9,7 @@ a {width:100%;}
 .container-fluid {
 	min-height: 100px;
 	color: white;
-	font-size: 16px;
+	font-size: 18px;
 	text-shadow: 2px 2px 4px #555555;
 }
 
@@ -75,4 +75,11 @@ a:link, a:visited, a:hover, a:active {
 #rbdays {
 	font-size: 30px;
 	line-height: 20px;
+}
+
+#foodtable {
+	display: table;
+	margin-top: 10px;
+	text-align: left;
+	vertical-align: baseline;
 }
