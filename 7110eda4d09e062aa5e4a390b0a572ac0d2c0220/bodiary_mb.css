@@ -23,11 +23,11 @@ a {width:100%;}
 }
 
 .memorywidget.container-fluid {
-	min-height: 100px;
+	min-height: 80px;
 }
 
 .homewidget.container-fluid {
-	min-height: 80px;
+	min-height: 100px;
 }
 
 .wrapper {
