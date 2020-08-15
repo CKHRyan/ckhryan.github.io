@@ -92,5 +92,9 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .MemoryNthDay {
-	font-size: 30px;
+	font-size: 36px;
+}
+
+.MemoryButton {
+	width: 80px;
 }

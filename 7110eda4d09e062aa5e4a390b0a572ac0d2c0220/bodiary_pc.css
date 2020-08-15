@@ -110,3 +110,7 @@ a:link, a:visited, a:hover, a:active {
 .MemoryNthDay {
 	font-size:42px;
 }
+
+.MemoryButton {
+	width: 200px;
+}
