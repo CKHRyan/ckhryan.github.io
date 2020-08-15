@@ -7,10 +7,10 @@ a {width:100%;}
 }
 
 .container-fluid {
-	margin: 0;
 	min-height: 100px;
 	color: white;
 	font-size: 16px;
+	text-shadow: 2px 2px 4px #555555;
 }
 
 .wrapper {
