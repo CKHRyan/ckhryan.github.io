@@ -1,16 +1,22 @@
-body {width: 100%; background-color: #F5F5F5;}
+body {width: 100%; background-image: url("bg1.jpg");/*background-color: #F5F5F5;*/}
 a {width:100%;}
 
 .bg {
-	width: 100%; background-color: #F5F5F5;
+	width: 100%; 
+	background-color: #F5F5F5;
+	background-image: url("bg1.jpg");
 }
 
 .wrapper {
-	background: white;
-	padding: 2% 5%;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 2% 6%;
 	margin-left:auto;
 	margin-right:auto;
-	max-width: 900px;
+	max-width: 940px;
+}
+
+.shadow {
+	box-shadow: 3px 3px 10px grey !important;
 }
 
 .spinner-border {
@@ -22,6 +28,7 @@ a {width:100%;}
 
 .container-fluid {
 	color: white;
+	text-shadow: 2px 2px 4px #555555;
 }
 
 .memorywidget.container-fluid {

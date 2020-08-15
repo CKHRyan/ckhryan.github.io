@@ -1,4 +1,4 @@
-body {width: 100%; background-color: white;}
+body {width: 100%; background-image: url("bg1.jpg");}
 a {width:100%;}
 
 .spinner-border {
@@ -11,6 +11,10 @@ a {width:100%;}
 	min-height: 100px;
 	color: white;
 	font-size: 16px;
+}
+
+.wrapper {
+	margin: 2% 5%;
 }
 
 .round-widget {
@@ -39,9 +43,10 @@ a {width:100%;}
 	max-width: 40%;
 }
 
-.wrapper {
-	margin: 2% 5%;
+.shadow {
+	box-shadow: 3px 3px 10px grey !important;
 }
+
 .title-name {
 	color: #0073b5;
 	font-family: 'Comic Sans MS';
@@ -52,6 +57,8 @@ a {width:100%;}
 
 .title-image {
 	max-height: 100px;
+	margin-left: auto;
+	margin-right: 15px;
 }
 
 .sd_title_name {
