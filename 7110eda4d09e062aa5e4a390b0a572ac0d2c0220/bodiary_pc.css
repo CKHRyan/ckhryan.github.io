@@ -106,3 +106,7 @@ a:link, a:visited, a:hover, a:active {
 	text-align: left;
 	vertical-align: baseline;
 }
+
+.MemoryNthDay {
+	font-size:42px;
+}

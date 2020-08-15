@@ -59,7 +59,7 @@ function printnth100dTable(n) {
 	for(var i = 1; i <= 3; i++) {
 		document.getElementById('memoryitem_'+i).innerHTML = "";
 		var comingRBDays = getnthDate((n + i - 1) * 100);
-		document.getElementById('memoryitem_'+i).innerHTML += "<b style='font-size:42px;'>" + ((n + i - 1) * 100) + "th</b> Day<br>"
+		document.getElementById('memoryitem_'+i).innerHTML += "<b class='MemoryNthDay'>" + ((n + i - 1) * 100) + "th</b> Day<br>"
 		document.getElementById('memoryitem_'+i).innerHTML += "<i>" + dateformater(comingRBDays) + "</i>";
 	}
 }

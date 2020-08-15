@@ -7,10 +7,17 @@ a {width:100%;}
 }
 
 .container-fluid {
-	min-height: 100px;
 	color: white;
 	font-size: 18px;
 	text-shadow: 2px 2px 4px #555555;
+}
+
+.memorywidget.container-fluid {
+	min-height: 100px;
+}
+
+.homewidget.container-fluid {
+	min-height: 80px;
 }
 
 .wrapper {
@@ -82,4 +89,8 @@ a:link, a:visited, a:hover, a:active {
 	margin-top: 10px;
 	text-align: left;
 	vertical-align: baseline;
+}
+
+.MemoryNthDay {
+	font-size: 30px;
 }
