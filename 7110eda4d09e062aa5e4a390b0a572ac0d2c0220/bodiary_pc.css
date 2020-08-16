@@ -40,6 +40,7 @@ a {width:100%;}
 .container-fluid {
 	color: white;
 	text-shadow: 2px 2px 4px #555555;
+	padding: 30px;
 }
 
 .memorywidget.container-fluid {
@@ -170,3 +171,9 @@ a:link, a:visited, a:hover, a:active {
 	margin-top: 30px;
 	padding: 0 50px;
 }
+
+.sheet_target {
+	margin-left: 20px; 
+	vertical-align: bottom;
+}
+

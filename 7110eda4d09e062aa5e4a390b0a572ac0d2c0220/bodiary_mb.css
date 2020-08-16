@@ -20,6 +20,8 @@ a {width:100%;}
 	color: white;
 	font-size: 18px;
 	text-shadow: 2px 2px 4px #555555;
+	padding: 20px;
+	padding-top: 15px;
 }
 
 .memorywidget.container-fluid {
@@ -167,4 +169,9 @@ a:link, a:visited, a:hover, a:active {
 .MemoryViewController {
 	margin-top: 30px;
 	padding: 0 50px;
+}
+
+.sheet_target {
+	margin-left: 8px; 
+	vertical-align: bottom;
 }
