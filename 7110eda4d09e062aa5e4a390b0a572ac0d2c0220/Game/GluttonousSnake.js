@@ -1,3 +1,5 @@
+const { JoydivModule } = require('./joydiv.js');
+
 var headblock;
 var mySnake;
 var myApple;
@@ -7,6 +9,27 @@ court_width = 600;
 
 const greenblock = "width:30px; height:30px; background: green; border: 3px solid DarkGreen; position: absolute;";
 const redblock = "width:20px; height:20px; background: red; border: 3px solid DarkRed; position: absolute;";
+
+/*
+var element = document.getElementById('controller');
+var joydiv = new JoydivModule.Joydiv({'element':element});
+element.addEventListener('joydiv-changed',function(e){
+  switch(joydiv.getOneOf8Directions().name) {
+	  case 'left':
+		SnakeController(37);
+		break;
+	case 'up':
+		SnakeController(38);
+		break;
+	case 'right':
+		SnakeController(39);
+		break;
+	case 'down':
+		SnakeController(40);
+		break;
+  }
+});*/
+document.addEventListener('keydown', (event) => SnakeController(event.keyCode));
 
 function startGame() {
 	mySnake = new SnakeStack();
@@ -143,34 +166,34 @@ class Block {
 	
 }
 
-document.addEventListener('keydown', function(event) {
-	switch(event.keyCode) {
-		case 37:
-			console.log('Left was pressed');
-			if (headblock.vectorX <= 0) {
-				headblock.setBlockVector(0, -30);
-			}
-			break;
-		case 38:
-			console.log('Up was pressed');
-			if (headblock.vectorY <= 0) {
-				headblock.setBlockVector(-30, 0);
-			}
-			break;
-		case 39:
-			console.log('Right was pressed');
-			if (headblock.vectorX >= 0) {
-				headblock.setBlockVector(0, 30);
-			}
-			break;
-		case 40:
-			console.log('Down was pressed');
-			if (headblock.vectorY >= 0) {
-				headblock.setBlockVector(30, 0);
-			}
-			break;
+function SnakeController(code) {
+	switch(code) {
+	case 37:
+		console.log('Left was pressed');
+		if (headblock.vectorX <= 0) {
+			headblock.setBlockVector(0, -30);
+		}
+		break;
+	case 38:
+		console.log('Up was pressed');
+		if (headblock.vectorY <= 0) {
+			headblock.setBlockVector(-30, 0);
+		}
+		break;
+	case 39:
+		console.log('Right was pressed');
+		if (headblock.vectorX >= 0) {
+			headblock.setBlockVector(0, 30);
+		}
+		break;
+	case 40:
+		console.log('Down was pressed');
+		if (headblock.vectorY >= 0) {
+			headblock.setBlockVector(30, 0);
+		}
+		break;
 	}
-});
+}
 
 function grow() {
 	console.log("Growing");

@@ -5,10 +5,10 @@ window.onload = function() {
 	var width = document.getElementById("main").getBoundingClientRect().width;
 	adjustStyle(width);
 	console.log(window.location.pathname);
-	if (window.location.pathname.includes("index.html")) {
-		updateDate();
-	}
 	loadExcel();
+		/*document.getElementById("foodtable_loadbar").style.display = "none";
+		document.getElementById("foodtable_loadspinner").style.display = "none";
+		document.getElementById("foodtable_option").style.display = "block";*/
 }
 
 function adjustStyle(width) {
@@ -62,15 +62,22 @@ function printFoodTable(region) {
 	}
 	
 	var district_rt_obj;
+	var district_color = [];
 	switch(region) {
 		case "HK":
 			district_rt_obj = restaurant_obj["Hong Kong Island"];
+			district_color.push("#15acee");
+			district_color.push("#d3e9fe");
 			break;
 		case "KL":
 			district_rt_obj = restaurant_obj["Kowloon"];
+			district_color.push("#ff4d4d");
+			district_color.push("#ffb3b3");
 			break;
 		case "NT":
 			district_rt_obj = restaurant_obj["New Territories"];
+			district_color.push("#6fd624");
+			district_color.push("#d4ffb8");
 			break;
 		default:
 			console.log("The region is not valid");
@@ -79,11 +86,11 @@ function printFoodTable(region) {
 
 	for (var dt in district_rt_obj) {
 		var row = ft.insertRow(ft.rows.length);
-		row.style = "background-color: #15acee; line-height: 30px;";
+		row.style = "background-color: " + district_color[0] + "; line-height: 30px;";
 		row.insertCell(0).innerHTML = dt;
 		for (var rt in district_rt_obj[dt]) {
 			var row = ft.insertRow(ft.rows.length);
-			row.style = "background-color: #d3e9fe; line-height: 25px;";
+			row.style = "background-color: " + district_color[1] + "; line-height: 25px;";
 			row.insertCell(0).innerHTML = district_rt_obj[dt][rt].Name;
 			row.insertCell(1).innerHTML = district_rt_obj[dt][rt].Address;
 			row.insertCell(2).innerHTML = district_rt_obj[dt][rt].Cuisine;

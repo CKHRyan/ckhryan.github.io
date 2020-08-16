@@ -35,12 +35,28 @@
 			</div>
 		</div>
 		
-		<div id="foodtable_option" style="display:none">
-			<button type="button" class="btn btn-primary" onclick="printFoodTable('HK')">Hong Kong</button>
-			<button type="button" class="btn btn-primary" onclick="printFoodTable('KL')">Kowloon</button>
-			<button type="button" class="btn btn-primary" onclick="printFoodTable('NT')">New Territories</button>
-			<a target="_blank" href="https://docs.google.com/spreadsheets/d/1AyerM7O4cnzWVxc4pG-lD5VYph-mxkKt5-ewAk5Sfag/edit#gid=0">
-				<button type="button" class="btn btn-primary">Edit</button>
+		<div id="foodtable_option" style="display:none;">
+			<button type="button" id="foodtable_hk" class="btn foodtablebutton round-widget shadow" onclick="printFoodTable('HK')">
+				Hong Kong
+				<img src="btn_hk.jpg" class="foodtablebuttonimg" >
+			</button>
+			<button type="button" id="foodtable_kl" class="btn foodtablebutton round-widget shadow" onclick="printFoodTable('KL')">
+				Kowloon
+				<img src="btn_kl.jpg" class="foodtablebuttonimg" >
+			</button>
+			<button type="button" id="foodtable_nt" class="btn foodtablebutton round-widget shadow" onclick="printFoodTable('NT')">
+				New Territories
+				<img src="btn_nt.jpg" class="foodtablebuttonimg" >
+			</button>
+			
+			<a target="_blank" href="https://docs.google.com/spreadsheets/d/1AyerM7O4cnzWVxc4pG-lD5VYph-mxkKt5-ewAk5Sfag/edit#gid=0" style="margin-left: 20px; vertical-align: bottom;">
+				<button type="button" class="btn btn-secondary">
+					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+					  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+					</svg>
+					Edit
+				</button>
 			</a>
 			<div id="foodtable">
 				<table></table>

@@ -23,6 +23,7 @@ a {width:100%;}
 	margin-left:auto;
 	margin-right:auto;
 	max-width: 940px;
+	min-height: 800px;
 }
 
 .shadow {
@@ -112,9 +113,44 @@ a:link, a:visited, a:hover, a:active {
 
 #foodtable {
 	display: table;
-	margin-top: 30px;
+	margin-top: 40px;
+	margin-left: 20px;
 	text-align: left;
 	vertical-align: baseline;
+}
+
+.foodtablebutton {
+	width: 200px;
+	height:165px;
+	font-size: 30px;
+    color:white;
+    opacity:0.95;
+	margin: 0 10px;
+	position:relative;
+	overflow: hidden;
+}
+
+#foodtable_hk.foodtablebutton {
+	background-color: #008bc7; /* For browsers that do not support gradients */        
+    background-image: linear-gradient(141deg, #4fcaff 0%, #008bc7 51%, #0077ab 75%);
+}
+
+#foodtable_kl.foodtablebutton {
+	background-color: #ff0000; /* For browsers that do not support gradients */        
+    background-image: linear-gradient(141deg, #ff9c75 0%, #ff0000 51%, #ff3d3d 75%);
+}
+
+#foodtable_nt.foodtablebutton {
+	background-color: #6fd624; /* For browsers that do not support gradients */        
+    background-image: linear-gradient(141deg, #b5ff80 0%, #6fd624 51%, #81bd55 75%);
+}
+
+.foodtablebutton .foodtablebuttonimg {
+	position:absolute;
+	left: 0;
+	top:0;
+	opacity: 0.3;
+	z-index: -1;
 }
 
 .MemoryNthDay {
@@ -122,5 +158,15 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .MemoryButton {
-	width: 200px;
+	background-color: #008bc7; /* For browsers that do not support gradients */        
+    background-image: linear-gradient(141deg, #4fcaff 0%, #008bc7 51%, #0077ab 75%);
+	color: white;
+	font-size: 26px;
+	width: 130px;
+	height: 60px;
+}
+
+.MemoryViewController {
+	margin-top: 30px;
+	padding: 0 50px;
 }
