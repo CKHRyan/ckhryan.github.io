@@ -21,15 +21,11 @@ a {width:100%;}
 	font-size: 18px;
 	text-shadow: 2px 2px 4px #555555;
 	padding: 20px;
-	padding-top: 15px;
-}
-
-.memorywidget.container-fluid {
-	min-height: 80px;
+	padding-top: 10px;
 }
 
 .homewidget.container-fluid {
-	min-height: 100px;
+	min-height: 110px;
 }
 
 .wrapper {
@@ -147,6 +143,10 @@ a:link, a:visited, a:hover, a:active {
 	z-index: -1;
 	width: 97px;
 	height: 80px;
+}
+
+.memorywidget.container-fluid {
+	min-height: 80px;
 }
 
 .MemoryNthDay {
