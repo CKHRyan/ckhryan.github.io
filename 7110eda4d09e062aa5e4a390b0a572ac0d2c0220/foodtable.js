@@ -5,10 +5,10 @@ window.onload = function() {
 	var width = document.getElementById("main").getBoundingClientRect().width;
 	adjustStyle(width);
 	console.log(window.location.pathname);
-	//loadExcel();
-		document.getElementById("foodtable_loadbar").style.display = "none";
-		document.getElementById("foodtable_loadspinner").style.display = "none";
-		document.getElementById("foodtable_option").style.display = "block";
+	loadExcel();
+		//document.getElementById("foodtable_loadbar").style.display = "none";
+		//document.getElementById("foodtable_loadspinner").style.display = "none";
+		//document.getElementById("foodtable_option").style.display = "block";
 }
 
 function adjustStyle(width) {

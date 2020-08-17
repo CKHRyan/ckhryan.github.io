@@ -73,14 +73,13 @@ a {width:100%;}
 	padding-left: 15px;
 	max-width: 70%;
 	z-index: 1;
-	line-height: 70px;
+	line-height: 65px;
 }
 
 .title-image {
-	max-height: 100px;
+	max-height: 125px;
 	max-width: 25%;
-	margin-left: auto;
-	margin-right: 10px;
+	margin: auto 10px 0px auto;
 	z-index: 0;
 }
 
