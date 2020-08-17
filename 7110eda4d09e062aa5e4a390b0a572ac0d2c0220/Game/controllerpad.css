@@ -9,8 +9,8 @@
 }
 
 .ctrl-up-btn, .ctrl-left-btn, .ctrl-right-btn, .ctrl-down-btn, .ctrl-center {
-	height: 50px;
-	width: 50px;
+	height: 180px;
+	width: 180px;
 	background: lightgrey;
 	border-radius: 15px;
 	border: 1px solid grey;
@@ -26,27 +26,27 @@ button:active.ctrl-up-btn, button:active.ctrl-left-btn, button:active.ctrl-right
 
 .ctrl-up {
 	top: 0px;
-	left: 50px;
+	left: 180px;
 }
 
 .ctrl-left {
-	top: 50px;
+	top: 180px;
 	left: 0px;
 }
 
 .ctrl-right {
-	top: 50px;
-	left: 100px;
+	top: 180px;
+	left: 360px;
 }
 
 .ctrl-down {
-	top: 100px;
-	left: 50px;
+	top: 360px;
+	left: 180px;
 }
 
 .ctrl-center {
-	top: 50px;
-	left: 50px;
+	top: 180px;
+	left: 180px;
 	background: lightgrey;
 	border-radius: 45%;
 	border: 1px solid grey;
