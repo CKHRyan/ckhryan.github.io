@@ -73,6 +73,7 @@ a {width:100%;}
 	padding-left: 15px;
 	max-width: 70%;
 	z-index: 1;
+	line-height: 70px;
 }
 
 .title-image {
@@ -112,11 +113,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .foodtablebutton {
-	/*width: 97px;
-	height: 80px;*/
-	min-width: 30%;
-	height: 0;
-	padding-top: 23%;
+	width: 97px;
+	height: 80px;
 	font-size: 18px;
     color:white;
     opacity:0.95;
