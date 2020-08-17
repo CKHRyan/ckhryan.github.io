@@ -16,6 +16,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	
 	<link href="joydiv-skin-default.css" rel="stylesheet"/>
+	<link id="size-stylesheet" rel="stylesheet" type="text/css" href="../bodiary_pc.css" />
     <style>
       #controller{
         width:150px;
@@ -28,25 +29,38 @@
 
 <body>
 
-	<div id = "Court" style="postition: absolute; background:lightgrey; height: 450px; width: 600px; border: 2px solid grey;"></div>
+	<div id="main">
 
-	<button onclick=startGame()>Start</button>
-	<button onclick=grow()>SnakeGrow</button>
-	<button onclick=clearGame()>Clear</button>
-	Apple eaten: <b id="apple_count">0</b>
-	
-	<div id='controller' class="joydiv-controller">
-      <div class="joydiv-up"></div>
-      <div class="joydiv-left"></div>
-      <div class="joydiv-right"></div>
-      <div class="joydiv-down"></div>
-      <div class="joydiv-trackpad">
-        <div class="joydiv-tracker"></div>
-      </div>
-    </div>
+		<div id = "Court" style="postition: absolute; background:lightgrey; height: 450px; width: 600px; border: 2px solid grey;"></div>
+
+		<button onclick=startGame()>Start</button>
+		<button onclick=grow()>SnakeGrow</button>
+		<button onclick=clearGame()>Clear</button>
+		Apple eaten: <b id="apple_count">0</b>
+		
+		<div id='controller' class="joydiv-controller" style="margin-left: 200px">
+		  <div class="joydiv-up"></div>
+		  <div class="joydiv-left"></div>
+		  <div class="joydiv-right"></div>
+		  <div class="joydiv-down"></div>
+		  <div class="joydiv-trackpad">
+			<div class="joydiv-tracker"></div>
+		  </div>
+		</div>
+	</div>
 
 	<script charset="UTF-8" src="joydiv.js"></script>
 	<script type="text/javascript" src="GluttonousSnake.js"></script>
+	<script>
+		var element = document.getElementById('controller');
+		var joydiv = new JoydivModule.Joydiv({'element':element});
+		element.addEventListener('joydiv-changed',function(){
+			if (mySnake != null) {
+				console.log(joydiv.getOneOf8Directions().name);
+				joyController(joydiv.getOneOf8Directions().name);
+			}
+		});
+	</script>
 
 </body>
 </html>

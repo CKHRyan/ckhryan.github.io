@@ -1,4 +1,20 @@
-const { JoydivModule } = require('./joydiv.js');
+window.onload = function(){
+	var width = document.getElementById("main").getBoundingClientRect().width;
+	adjustStyle(width);
+	console.log(window.location.pathname);
+}
+
+function adjustStyle(width) {
+	console.log(width);
+	if (width < 750) {
+		console.log("mobile");
+		$("#size-stylesheet").attr("href", "../bodiary_mb.css");
+	} else {
+		console.log("device");
+		$("#size-stylesheet").attr("href", "../bodiary_pc.css"); 
+	}
+}
+	
 
 var headblock;
 var mySnake;
@@ -14,7 +30,9 @@ const redblock = "width:20px; height:20px; background: red; border: 3px solid Da
 var element = document.getElementById('controller');
 var joydiv = new JoydivModule.Joydiv({'element':element});
 element.addEventListener('joydiv-changed',function(e){
-  switch(joydiv.getOneOf8Directions().name) {
+*/
+function joyController(dir) {
+  switch(dir) {
 	  case 'left':
 		SnakeController(37);
 		break;
@@ -28,7 +46,7 @@ element.addEventListener('joydiv-changed',function(e){
 		SnakeController(40);
 		break;
   }
-});*/
+}
 document.addEventListener('keydown', (event) => SnakeController(event.keyCode));
 
 function startGame() {

@@ -294,5 +294,3 @@ var JoydivModule;
     })();
     JoydivModule.Joydiv = Joydiv;    
 })(JoydivModule || (JoydivModule = {}));
-
-exports.joydiv =  JoydivModule;

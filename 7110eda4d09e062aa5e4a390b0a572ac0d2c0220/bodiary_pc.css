@@ -185,3 +185,7 @@ a:link, a:visited, a:hover, a:active {
 	vertical-align: bottom;
 }
 
+.joydiv-controller {
+	display: none;
+}
+

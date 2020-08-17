@@ -189,3 +189,7 @@ a:link, a:visited, a:hover, a:active {
 	margin-left: 8px; 
 	vertical-align: bottom;
 }
+
+.joydiv-controller {
+	display: block;
+}
