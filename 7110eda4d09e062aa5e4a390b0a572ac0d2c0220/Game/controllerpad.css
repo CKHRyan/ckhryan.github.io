@@ -1,0 +1,53 @@
+.controller_pad {
+	position: relative;
+}
+
+.ctrl-up, .ctrl-left, .ctrl-right, .ctrl-down, .ctrl-center {
+	position: absolute;
+	text-align: center;
+	font-size: 14px;
+}
+
+.ctrl-up-btn, .ctrl-left-btn, .ctrl-right-btn, .ctrl-down-btn, .ctrl-center {
+	height: 50px;
+	width: 50px;
+	background: lightgrey;
+	border-radius: 15px;
+	border: 1px solid grey;
+}
+
+.ctrl-up-btn, .ctrl-left-btn, .ctrl-right-btn, .ctrl-down-btn, .ctrl-center :focus {
+    outline: 0 !important;
+}
+
+button:active.ctrl-up-btn, button:active.ctrl-left-btn, button:active.ctrl-right-btn, button:active.ctrl-down-btn {
+    background-color: white;
+}
+
+.ctrl-up {
+	top: 0px;
+	left: 50px;
+}
+
+.ctrl-left {
+	top: 50px;
+	left: 0px;
+}
+
+.ctrl-right {
+	top: 50px;
+	left: 100px;
+}
+
+.ctrl-down {
+	top: 100px;
+	left: 50px;
+}
+
+.ctrl-center {
+	top: 50px;
+	left: 50px;
+	background: lightgrey;
+	border-radius: 45%;
+	border: 1px solid grey;
+}

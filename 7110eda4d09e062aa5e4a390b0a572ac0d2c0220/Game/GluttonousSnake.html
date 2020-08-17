@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=600,initial-scale=1, user-scalable=no, maximum-scale=1">
+	<meta name="viewport" content="width=600, user-scalable=no, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Content-Script-Type" content="text/javascript">
     <meta http-equiv="Content-Style-Type" content="text/css">
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	
-	<link href="joydiv-skin-default.css" rel="stylesheet"/>
+	<link href="controllerpad.css" rel="stylesheet"/>
 	<link id="size-stylesheet" rel="stylesheet" type="text/css" href="../bodiary_pc.css" />
     <style>
       #controller{
@@ -38,29 +38,25 @@
 		<button onclick=clearGame()>Clear</button>
 		Apple eaten: <b id="apple_count">0</b>
 		
-		<div id='controller' class="joydiv-controller" style="margin-left: 200px">
-		  <div class="joydiv-up"></div>
-		  <div class="joydiv-left"></div>
-		  <div class="joydiv-right"></div>
-		  <div class="joydiv-down"></div>
-		  <div class="joydiv-trackpad">
-			<div class="joydiv-tracker"></div>
-		  </div>
+		<div id='controller' class="controller_pad" style="margin-left: auto; margin-right: auto;">
+			<div class="ctrl-up">
+				<button class="ctrl-up-btn" onclick=SnakeController(38)>Up</button>
+			</div>
+			<div class="ctrl-left">
+				<button class="ctrl-left-btn" onclick=SnakeController(37)>Left</button>
+			</div>
+			<div class="ctrl-right">
+				<button class="ctrl-right-btn" onclick=SnakeController(39)>Right</button>
+			</div>
+			<div class="ctrl-down">
+				<button class="ctrl-down-btn" onclick=SnakeController(40)>Down</button>
+			</div>
+			<div class="ctrl-center"></div>
 		</div>
 	</div>
 
-	<script charset="UTF-8" src="joydiv.js"></script>
 	<script type="text/javascript" src="GluttonousSnake.js"></script>
-	<script>
-		var element = document.getElementById('controller');
-		var joydiv = new JoydivModule.Joydiv({'element':element});
-		element.addEventListener('joydiv-changed',function(){
-			if (mySnake != null) {
-				console.log(joydiv.getOneOf8Directions().name);
-				joyController(joydiv.getOneOf8Directions().name);
-			}
-		});
-	</script>
+
 
 </body>
 </html>

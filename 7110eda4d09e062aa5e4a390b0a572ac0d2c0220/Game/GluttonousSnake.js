@@ -26,27 +26,6 @@ court_width = 600;
 const greenblock = "width:30px; height:30px; background: green; border: 3px solid DarkGreen; position: absolute;";
 const redblock = "width:20px; height:20px; background: red; border: 3px solid DarkRed; position: absolute;";
 
-/*
-var element = document.getElementById('controller');
-var joydiv = new JoydivModule.Joydiv({'element':element});
-element.addEventListener('joydiv-changed',function(e){
-*/
-function joyController(dir) {
-  switch(dir) {
-	  case 'left':
-		SnakeController(37);
-		break;
-	case 'up':
-		SnakeController(38);
-		break;
-	case 'right':
-		SnakeController(39);
-		break;
-	case 'down':
-		SnakeController(40);
-		break;
-  }
-}
 document.addEventListener('keydown', (event) => SnakeController(event.keyCode));
 
 function startGame() {
@@ -185,6 +164,9 @@ class Block {
 }
 
 function SnakeController(code) {
+	if (mySnake == null) {
+		return;
+	}
 	switch(code) {
 	case 37:
 		console.log('Left was pressed');
