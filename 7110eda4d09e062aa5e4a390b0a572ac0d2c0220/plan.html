@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+	
+	<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="0">
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
+
+	<title>Plan</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
+	<link id="size-stylesheet" rel="stylesheet" type="text/css" href="bodiary_pc.css" />
+
+</head>
+<body>
+
+	<div id="main" class="wrapper">
+	
+		<div class="title-header">
+			<div class="sd_title_name">Plan Notes</div>
+		</div>
+
+		<div class="list-group">
+			<div class="topbar list-group-item list-group-item-action">
+			</div>
+			<div id="plan" class="planlist_fix"></div>
+		</div>
+		
+
+
+		<div id="plan" class="planlist_fix"></div>
+		
+		<div id="list_ctrller" style="margin-top: 10px">
+			<button class="btn btn-info" onclick="postToDB()" style=" min-height: 35px; min-width:50px;">
+				Add
+			</button>
+
+			<button class="btn btn-info" onclick="clearDB()" style=" min-height: 35px; min-width:50px;">
+				Clear
+			</button>
+
+			<button id="mod" class="btn btn-info" onclick="setModifiable(!isModifiable)" style="min-height: 35px; min-width:90px;">
+				Edit Mode
+			</button>
+			<br>
+			<button id="edit" class="btn btn-info" onclick="editDB()" style="visibility:hidden; min-height:35px; min-width:50px;">
+				Edit
+			</button>
+
+			<button id="del" class="btn btn-info" onclick="deleteDB()" style="visibility: hidden; min-height:35px; min-width:50px;">
+				Delete
+			</button>
+		</div>
+	</div>
+
+	<script src = "planlist.js" type="text/javascript"></script>
+</body>
+</html>

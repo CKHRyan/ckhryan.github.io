@@ -193,3 +193,41 @@ a:link, a:visited, a:hover, a:active {
 .controller_pad {
 	display: block;
 }
+
+.planelement {
+	width: 100%;
+	font-size: 18px;
+	text-align: left;
+	background-color: rgba(247, 247, 249, 0.8);
+}
+
+.planlist button:focus {
+	outline:none;
+}
+
+.planlist_fix button:hover {
+	cursor: default;
+}
+
+.planlist_fix button:focus {
+	outline:none;
+}
+
+.list-group {
+	overflow:hidden;
+}
+.list-group-item.topbar {
+	background-image: url('denim-texture.jpg');
+	background-size:cover;
+	font-size: 18px;	
+	height: 35px;
+}	
+
+.foodelement.list-group-item {
+	width: 100%;
+	text-align: left;
+}
+
+#list_ctrller .btn {
+	margin-top: 5px;
+}
