@@ -84,8 +84,10 @@ function postToDB() {
 
 function clearDB() {
 	//planjson.plan = [];
-	planRef.set([]);
-	printplanTable();
+	if (confirm("Do you ensure to clear the list?")) {
+		planRef.set([]);
+		printplanTable();
+	}
 }
 
 function deleteDB() {

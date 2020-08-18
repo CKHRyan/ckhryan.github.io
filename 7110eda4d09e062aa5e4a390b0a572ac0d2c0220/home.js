@@ -8,6 +8,15 @@ window.onload = function(){
 	}
 }
 
+function stopSubmission(){
+  try {
+    window.stop();
+  } catch (exception) {
+    document.execCommand('Stop');
+  }
+  console.log("Should have stopped.")
+}
+
 function helloworld() {
 	alert("helloworld!");
 }
