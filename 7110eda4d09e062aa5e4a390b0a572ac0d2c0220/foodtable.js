@@ -1,14 +1,43 @@
 
 var restaurant_obj;
+var ref;
+var foodRef;
 
 window.onload = function() {
 	var width = document.getElementById("main").getBoundingClientRect().width;
 	adjustStyle(width);
 	console.log(window.location.pathname);
-	loadExcel();
-		//document.getElementById("foodtable_loadbar").style.display = "none";
-		//document.getElementById("foodtable_loadspinner").style.display = "none";
-		//document.getElementById("foodtable_option").style.display = "block";
+	//loadExcel();
+	//document.getElementById("foodtable_loadbar").style.display = "none";
+	//document.getElementById("foodtable_loadspinner").style.display = "none";
+	//document.getElementById("foodtable_option").style.display = "block";
+  	
+	var firebaseConfig = {
+	    apiKey: "AIzaSyAA_vsyVyw3z6IJF5Rl9uq3xOyx1zFeZmY",
+	    authDomain: "test-f7cbe.firebaseapp.com",
+	    databaseURL: "https://test-f7cbe.firebaseio.com",
+	    projectId: "test-f7cbe",
+	    storageBucket: "test-f7cbe.appspot.com",
+	    messagingSenderId: "393255938266",
+	    appId: "1:393255938266:web:7d55dfb04a5993b1a79de3"
+  	};
+
+	firebase.initializeApp(firebaseConfig);
+	ref = firebase.database().ref();
+	foodRef = firebase.database().ref("food/");
+		
+	foodRef.once("value", function(snapshot) {
+		console.log(snapshot.val());
+		restaurant_obj = snapshot.val();
+
+		document.getElementById("foodtable_loadbar").style.display = "none";
+		document.getElementById("foodtable_loadspinner").style.display = "none";
+		document.getElementById("foodtable_option").style.display = "block";
+		printFoodTable("HK");
+	}, function (error) {
+		console.log("Error: " + error.code);
+	});
+
 }
 
 function adjustStyle(width) {
@@ -20,8 +49,7 @@ function adjustStyle(width) {
 		console.log("device");
 		$("#size-stylesheet").attr("href", "bodiary_pc.css"); 
 	}
-}
-	
+}	
 
 function loadExcel() {
 	$.ajax({
@@ -51,7 +79,6 @@ function loadExcel() {
 }
 
 function printFoodTable(region) {
-	
 	if (restaurant_obj == null)
 		return;
 

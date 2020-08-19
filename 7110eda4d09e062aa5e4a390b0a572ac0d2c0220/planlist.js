@@ -28,7 +28,7 @@ window.onload = async function() {
 	  
 	ref.on("value", function(snapshot) {
 		console.log(snapshot.val());
-		planjson = snapshot.val();
+		planjson = snapshot.val().plan;
 		printplanTable();
 	}, function (error) {
 		console.log("Error: " + error.code);
@@ -73,17 +73,18 @@ function postToDB() {
 		return;
 	}
 	
-	if(planjson == null || !("plan" in planjson)) {
-		ref.set({"plan":[addevent]})
+	if(planjson == null) {
+		updateDB([addevent]);
+		console.log("push single");
 	}
 	else {
-		planjson.plan.push(addevent);
+		planjson.push(addevent);
+		updateDB(planjson);
 	}
-	updateDB(planjson.plan);
 }
 
 function clearDB() {
-	//planjson.plan = [];
+	//planjson = [];
 	if (confirm("Do you ensure to clear the list?")) {
 		planRef.set([]);
 		printplanTable();
@@ -95,8 +96,8 @@ function deleteDB() {
 		return;
 	}
 	if (confirm("Do you ensure to delete this item?")) {
-		planjson.plan.splice(focus_item, 1);
-		updateDB(planjson.plan);
+		planjson.splice(focus_item, 1);
+		updateDB(planjson);
 		printplanTable();
 	}
 		document.getElementById("edit").style.opacity = "0.5";
@@ -119,26 +120,32 @@ function editDB() {
 		return;
 	}
 	else {
-		planjson.plan[focus_item] = newVal;
-		updateDB(planjson.plan);
+		planjson[focus_item] = newVal;
+		updateDB(planjson);
 	}
 	unselectItem(focus_item);
 }
 
 function updateDB(newData) {
-	planRef.set(newData);
+	ref.update({plan: newData});
 }
 
 function setModifiable(val) {
 	isModifiable = val;
 	if(val == true) {
-		document.getElementById("mod").innerHTML = "Leave Edit";
+		document.getElementById("mod").style.backgroundColor = "#117d8c";
+		document.getElementById("mod").innerHTML = "Leave Edit Mode";
+		document.getElementById("add").style.visibility = "visible";
+		document.getElementById("clear").style.visibility = "visible";
 		document.getElementById("edit").style.visibility = "visible";
 		document.getElementById("del").style.visibility = "visible";
 		document.getElementById("plan").className = "planlist";
 	}
 	else {
+		document.getElementById("mod").style.backgroundColor = "#17a3b8";
 		document.getElementById("mod").innerHTML = "Edit Mode";
+		document.getElementById("add").style.visibility = "hidden";
+		document.getElementById("clear").style.visibility = "hidden";
 		document.getElementById("edit").style.visibility = "hidden";
 		document.getElementById("del").style.visibility = "hidden";
 		document.getElementById("plan").className = "planlist_fix";
@@ -168,9 +175,8 @@ function printplanTable() {
 		ft.innerHTML = ""; 
 		return;
 	}
-	var ft = document.getElementById('plan');
 	ft.innerHTML = ""; 
-	for (x in planjson.plan) {
-		ft.innerHTML += "<button id='list_" + x + "' class='planelement list-group-item' onclick=selectItem(" + x + ")>" + (parseInt(x)+1) + ". " + planjson.plan[x] + "</button>";
+	for (x in planjson) {
+		ft.innerHTML += "<button id='list_" + x + "' class='planelement list-group-item' onclick=selectItem(" + x + ")>" + (parseInt(x)+1) + ". " + planjson[x] + "</button>";
 	}
 }

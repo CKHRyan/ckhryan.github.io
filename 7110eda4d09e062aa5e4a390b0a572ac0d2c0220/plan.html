@@ -38,18 +38,18 @@
 		<div id="plan" class="planlist_fix"></div>
 		
 		<div id="list_ctrller" style="margin-top: 10px">
-			<button class="btn btn-info" onclick="postToDB()" style=" min-height: 35px; min-width:50px;">
-				Add
-			</button>
-
-			<button class="btn btn-info" onclick="clearDB()" style=" min-height: 35px; min-width:50px;">
-				Clear
-			</button>
-
-			<button id="mod" class="btn btn-info" onclick="setModifiable(!isModifiable)" style="min-height: 35px; min-width:90px;">
+			<button id="mod" class="btn" onclick="setModifiable(!isModifiable)" style="background-color: #17a3b8; color: white; min-height: 35px; min-width:90px;">
 				Edit Mode
 			</button>
 			<br>
+			<button id="add" class="btn btn-info" onclick="postToDB()" style="visibility:hidden; min-height: 35px; min-width:50px;">
+				Add
+			</button>
+
+			<button id="clear" class="btn btn-info" onclick="clearDB()" style="visibility:hidden; min-height: 35px; min-width:50px;">
+				Clear
+			</button>
+			
 			<button id="edit" class="btn btn-info" onclick="editDB()" style="visibility:hidden; min-height:35px; min-width:50px;">
 				Edit
 			</button>
