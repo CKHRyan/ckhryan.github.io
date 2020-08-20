@@ -234,7 +234,6 @@ function authStateObserver(user) {
     // We save the Firebase Messaging Device token and enable notifications.
     // saveMessagingDeviceToken();
     loadMessages();
-	displayMessage(123, "Ryan-Test", "for testing", "", "");
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     userNameElement.setAttribute('hidden', 'true');
