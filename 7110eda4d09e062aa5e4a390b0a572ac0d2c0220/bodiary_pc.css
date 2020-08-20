@@ -43,6 +43,20 @@ a {width:100%;}
 	padding: 30px;
 	background-image: url('denim-texture.jpg');
 	background-size:cover;
+	transition: transform .5s;
+	z-index: 0;
+}
+
+#home .container-fluid:hover {
+	-ms-transform: scale(1.06); /* IE 9 */
+	-webkit-transform: scale(1.06); /* Safari 3-8 */
+	transform: scale(1.06); 
+}
+
+#memory .container-fluid:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
 }
 
 .memorywidget.container-fluid {
@@ -65,11 +79,21 @@ a {width:100%;}
 .left-widget {
 	padding-right: 5px;
 	padding-left: 0;
+	z-index: 0;
+}
+
+.left-widget:hover {
+	z-index: 1;
 }
 
 .right-widget {
 	padding-right: 0;
 	padding-left: 5px;
+	z-index: 0;
+}
+
+.right-widget:hover {
+	z-index: 1;
 }
 
 .widget-w6 {
