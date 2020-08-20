@@ -168,7 +168,7 @@ function requestNotificationsPermissions() {
   console.log('Requesting notifications permission...');
   firebase.messaging().requestPermission().then(function() {
     // Notification permission granted.
-    saveMessagingDeviceToken();
+    //saveMessagingDeviceToken();
   }).catch(function(error) {
     console.error('Unable to get permission to notify.', error);
   });
@@ -232,8 +232,9 @@ function authStateObserver(user) {
     //signInHMCButtonElement.setAttribute('hidden', 'true');
 
     // We save the Firebase Messaging Device token and enable notifications.
-    saveMessagingDeviceToken();
+    // saveMessagingDeviceToken();
     loadMessages();
+	displayMessage(123, "Ryan-Test", "for testing", "", "");
   } else { // User is signed out!
     // Hide user's profile and sign-out button.
     userNameElement.setAttribute('hidden', 'true');
