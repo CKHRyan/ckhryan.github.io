@@ -48,7 +48,7 @@ function signIn(user) {
   if (password == null) {
     return;
   }
-  /*
+  
   firebase.auth().signInWithEmailAndPassword(email, password)
   .then(function(CurrentUser) {
     /*firebase.auth().currentUser.updateProfile({
@@ -59,13 +59,13 @@ function signIn(user) {
       // An error happened.
     });
     */
-  /*  console.log(CurrentUser.user.displayName + " logs in successfully.");
+    console.log(CurrentUser.user.displayName + " logs in successfully.");
   })
   .catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
     alert("ERR_CODE: " + errorCode + "\n" + errorMessage);
-  });*/
+  });
 }
 
 // Signs-out of Friendly Chat.
