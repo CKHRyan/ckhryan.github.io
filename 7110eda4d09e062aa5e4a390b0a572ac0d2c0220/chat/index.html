@@ -65,14 +65,14 @@
       <div id="user-container">
         <div hidden id="user-pic"></div>
         <div hidden id="user-name"></div>
-        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white" onclick="signOut()">
           Sign-out
         </button>
         <div hidden id="sign-in">
-          <button id="sign-in-ckh" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+          <button id="sign-in-ckh" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white" onclick="fusignIn('ckh')">
             <i class="material-icons">account_circle</i>Sign-in CKH
           </button>
-          <button id="sign-in-hmc" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
+          <button id="sign-in-hmc" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white" onclick="fusignIn('hmc')">
             <i class="material-icons">account_circle</i>Sign-in HMC
           </button>
         </div>

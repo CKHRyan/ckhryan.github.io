@@ -15,17 +15,17 @@
  */
 'use strict';
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyAO8lCERmqaCmPAe5GRfMhkC5eIgPHDZMg",
-    authDomain: "friendlychat-2e536.firebaseapp.com",
-    databaseURL: "https://friendlychat-2e536.firebaseio.com",
-    projectId: "friendlychat-2e536",
-    storageBucket: "friendlychat-2e536.appspot.com",
-    messagingSenderId: "259194624974",
-    appId: "1:259194624974:web:1d6b2e91f302e07d4da99f"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyAO8lCERmqaCmPAe5GRfMhkC5eIgPHDZMg",
+  authDomain: "friendlychat-2e536.firebaseapp.com",
+  databaseURL: "https://friendlychat-2e536.firebaseio.com",
+  projectId: "friendlychat-2e536",
+  storageBucket: "friendlychat-2e536.appspot.com",
+  messagingSenderId: "259194624974",
+  appId: "1:259194624974:web:1d6b2e91f302e07d4da99f"
+};
 
-	firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 // Signs-in Friendly Chat.
 function signIn(user) {
@@ -346,9 +346,9 @@ var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 // Saves message on form submit.
 messageFormElement.addEventListener('submit', onMessageFormSubmit);
-signOutButtonElement.addEventListener('click', signOut);
-signInCKHButtonElement.addEventListener('click', function(){signIn('ckh')});
-signInHMCButtonElement.addEventListener('click', function(){signIn('hmc')});
+//signOutButtonElement.addEventListener('click', signOut);
+//signInCKHButtonElement.addEventListener('click', function(){signIn('ckh')});
+//signInHMCButtonElement.addEventListener('click', function(){signIn('hmc')});
 
 // Toggle for the button.
 messageInputElement.addEventListener('keyup', toggleButton);
