@@ -41,7 +41,7 @@ a {width:100%;}
 	color: white;
 	text-shadow: 2px 2px 4px #222222;
 	padding: 30px;
-	background-image: url('denim-texture-L.jpg');
+	background-image: url('denim-texture.jpg');
 	background-size:cover;
 }
 
@@ -212,7 +212,7 @@ a:link, a:visited, a:hover, a:active {
 	overflow:hidden;
 }
 .list-group-item.topbar {
-	background-image: url('denim-texture-L.jpg');
+	background-image: url('denim-texture.jpg');
 	background-size:cover;
 	font-size: 26px;	
 	height: 60px;
