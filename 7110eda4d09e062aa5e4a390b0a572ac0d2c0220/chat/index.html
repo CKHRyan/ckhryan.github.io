@@ -26,19 +26,21 @@
   <link rel="manifest" href="manifest.json">
 
   <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
+  <!--<meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Chat">
   <meta name="theme-color" content="#303F9F">
-
+  -->
   <!-- Add to homescreen for Safari on iOS -->
+  <!--
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Chat">
   <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
-
+  -->
   <!-- Tile icon for Win8 -->
-  <meta name="msapplication-TileColor" content="#3372DF">
+  <!--<meta name="msapplication-TileColor" content="#3372DF">
   <meta name="msapplication-navbutton-color" content="#303F9F">
+  -->
 
   <!-- Material Design Lite -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -48,6 +50,8 @@
   <!-- App Styling -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="styles/main.css">
+
+  <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
 </head>
 <body>
 <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -115,7 +119,6 @@
 <!-- Import and configure the Firebase SDK -->
 <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
 <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
 <!--
 <script src="/__/firebase/5.1.0/firebase-app.js"></script>
 <script src="/__/firebase/5.1.0/firebase-auth.js"></script>
